@@ -1,0 +1,104 @@
+body{
+    background: linear-gradient(135deg, #fff5f8, #ffe6eb);
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.title{
+    font-family: "Great Vibes", cursive;
+    color: #e75480;
+    font-size: 3rem;
+    animation: fadeInDown 1.5s ease;
+}
+.subtitle{
+    color: #555;
+    font-size: 1.1rem;
+    animation: fadeIn 2s ease;
+}
+.timer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    color: #e75480;
+    animation: fadeIn 2.5s ease;
+}
+.timer div{
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    min-width: 100px;
+}
+.timer span{
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.timer small{
+    font-size: 0.9rem;
+    color: #777;
+}
+.final-message{
+    margin-top: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 2s ease;
+}
+.final-message.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.final-message h2{
+    color: #e75480;
+    font-family: "Great Vibes", cursive;
+    font-size: 2.2rem;
+}
+.final-message p{
+    color: #555;
+}
+
+.floating-hearts::before,
+.floating-hearts::after{
+    content: ❤️💕💖❤️;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    animation: floatHearts 10s linear infinite;
+    opacity: 0.15;
+}
+@keyframes floatHearts{
+    0%{ transform: translateY(100vh) scale(0.8);}
+    100%{transform: translateY(-100vh) scale(1.2);}
+}
+.btn-romantic{
+    background-color: #e75480;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+}
+.btn-romantic:hover{
+    background-color: #ff6f91;
+    transform: scale(1.05);
+}
+@keyframes fadeIn{
+    from{ opacity: 0;}
+    to{ opacity: 1;}
+}
+@keyframes fadeInDown{
+    from{ opacity: 0; transform: translateY(-20px);}
+    to{ opacity: 1; transform: translateY(0);}
+}
+@media (max-width:767px){
+    .title { font-size: 2.2rem;}
+    .timer div{min-width: 80px; padding: 10px;}
+    .timer span{font-size: 1.5rem;}
+}

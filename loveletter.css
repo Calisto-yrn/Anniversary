@@ -1,0 +1,87 @@
+body{
+    background: linear-gradient(135deg, #fff5f8, #ffe6eb);
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+h1{
+    font-family: "Great Vibes", cursive;
+    color: #e75480;
+    font-size: 3rem;
+    animation: fadeIn 1.5s ease;  
+}
+.letter {
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+    animation: slideUp 2s ease;
+}
+.letter p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeText 1s forwards;
+}
+.letter p:nth-child(1)
+{ animation-delay: 0.5s; }
+.letter p:nth-child(2)
+{ animation-delay: 1s; }
+.letter p:nth-child(3)
+{ animation-delay: 2s; }
+.letter p:nth-child(4)
+{ animation-delay: 3s; }
+.letter p:nth-child(5)
+{ animation-delay: 4s; }
+.letter p:nth-child(6)
+{ animation-delay: 5s; }
+.letter p:nth-child(7)
+{ animation-delay: 6s; }
+
+.signature{
+   font-family: "Great Vibes", cursive;
+   color: #e75480; 
+   font-size: 1.8rem;
+}
+.btn-romantic{
+    background-color: #e75480;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-size: 1.05rem;
+    transition: all 0.3 ease;
+}
+.btn-romantic:hover {
+    background-color: #ff6f91;
+    transform: scale(1.05);
+}
+.btn-outline-romantic {
+    border: 2px solid #e75480;
+    color: #e75480;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+.btn-outline-romantic:hover{
+    background-color: #e75480;
+    color: white; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeText {
+    to { opacity: 1; transform: translateY(0);}
+}
+@media (max-width: 767px){
+    h1 { font-size: 2.3rem;}
+    .letter { font-size: 1rem; padding: 20px;}
+}
